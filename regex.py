@@ -78,7 +78,7 @@ def phone_number():
 def url():
     while True:
         quote = input("Enter the URL: ").strip()
-        output = re.findall("^(https:\/\/|http:\/\/)(www\.)?(\w+\.)+\w+$", quote)
+        output = re.findall("(https:\/\/|http:\/\/)(www\.)?(\w+(-)*\w+\.)+\w+(\/(\w+)?)*(\?\w+=\w+)*$", quote)
         if output:
             print(f"The URL, {quote}, input is correct!")
             break
