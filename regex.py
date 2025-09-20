@@ -92,7 +92,7 @@ def url():
 def credit_card():
     while True:
         quote = input("Enter the credit card number: ").strip()
-        output = re.findall("pattern", quote)
+        output = re.findall("\d{4}(-| )?\d{4}(-| )?\d{4}(-| )?\d{4}", quote)
         if output:
             print(f"The credit card number, {quote}, is correct!")
             break
