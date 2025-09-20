@@ -20,7 +20,7 @@ def prompt_user():
     print("6. Time")
     
     while True: # A while loop is used for input validation.
-        selection = input("Select 1-5: ").strip()
+        selection = input("Select 1-6: ").strip()
         if selection == "1":
             email()
             continue_or_stop()
@@ -57,6 +57,7 @@ def email():
             print(f"The Email, {quote}, input is correct!")
             break
         else:
+            print(output)
             print(f"The Email, {quote}, is not correct! Please try again!")
             print("Emails should follow this format: user@example.com or firstname.lastname@company.co.uk")
             continue
@@ -104,7 +105,8 @@ def credit_card():
 def html_tags():
     while True:
         quote = input("Enter the HTML tag: ").strip()
-        output = re.findall("pattern", quote)
+        output = re.findall("^<[A-Za-z]+>$", quote)
+        "^<([A-Za-z][\w\-]*)((( )+[A-Za-z-]+)(=((\"[\w\-\. ]+\")|('[\w\-\. ]+'))))*>$"
         if output:
             print(f"The HTML tag, {quote}, is correct!")
             break
@@ -143,3 +145,6 @@ def continue_or_stop():
             continue
 
 
+
+if __name__ == "__main__":
+    prompt_user()
