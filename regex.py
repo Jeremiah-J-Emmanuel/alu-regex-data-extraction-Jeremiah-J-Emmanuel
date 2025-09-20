@@ -119,7 +119,7 @@ def html_tags():
 def time_check():
     while True:
         quote = input("Enter the time (24hr format or 12hr format): ").strip()
-        output = re.findall("pattern", quote)
+        output = re.findall("((23|22|21|20|([0-1][0-9])):[0-5]\d)|((12|11|10|[1-9]):[0-5]\d (AM|PM))", quote)
         if output:
             print(f"The time, {quote}, is correct!")
             break
