@@ -43,8 +43,8 @@ Select 1-6:
 
 When you choose an option, you will be asked to input the data that you want to validate. If the input that you have entered is not valid, you will be reprompted to enter a valid input:
 
-Example:
-Assuming I chose to validate emails:
+Example:<br>
+<em>Assuming I chose to validate emails:</em><br>
 <strong>
 Enter the Email: Jeremiah<br>
 The Email, Jeremiah, is not correct! Please try again!<br>
@@ -53,7 +53,7 @@ Emails should follow this format: user@example.com or firstname.lastname@company
 Enter the Email: j.emmanuel@alustudent.com<br>
 The Email, j.emmanuel@alustudent.com, input is correct!<br>
 Do you want to continue validating input [Y/N]: <br>
-<strong>
+</strong>
 
 When you enter a valid input, you will be asked if you want to continue to validate input.
 If you select yes, the application will show you the start up menu. If you choose no, the application will close.
