@@ -10,8 +10,8 @@ To make use of this data validator, follow these steps.
 1. Clone this repository:<br>
     a. If you are making use of a linux system, run this in your terminal:<br>
         git clone https://github.com/Jeremiah-J-Emmanuel/alu-regex-data-extraction-Jeremiah-J-Emmanuel.git <br>
-        
-        After cloning, go to the folder where the files are. The folder would most likely be called alu-regex-data-extraction-Jeremiah-J-Emmanuel.
+
+    After cloning, go to the folder where the files are. The folder would most likely be called alu-regex-data-extraction-Jeremiah-J-Emmanuel.
 
     b. If you are making use of an IDE like VS code or Atom to clone this repository:<br>
         Clone this repo with your IDE. Cloning methods vary for different IDEs
