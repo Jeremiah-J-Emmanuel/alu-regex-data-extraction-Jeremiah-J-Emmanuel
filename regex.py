@@ -11,53 +11,59 @@ def clear_screen():
         _ = os.system('clear')
 
 def prompt_user():
-    print("Please select the type of data that you want to validate:")
-    print("1. Emails")
-    print("2. Phone numbers")
-    print("3. URLS")
-    print("4. Credit Card Numbers")
-    print("5. html tags")
-    print("6. Time")
+    clear_screen()
+    try:
+        print("Please select the type of data that you want to validate:")
+        print("1. Emails")
+        print("2. Phone numbers")
+        print("3. URLS")
+        print("4. Credit Card Numbers")
+        print("5. html tags")
+        print("6. Time")
     
-    while True: # A while loop is used for input validation.
-        selection = input("Select 1-6: ").strip()
-        if selection == "1":
-            email()
-            continue_or_stop()
-            break
-        elif selection == "2":
-            phone_number()
-            continue_or_stop()
-            break
-        elif selection == "3":
-            url()
-            continue_or_stop()
-            break
-        elif selection == "4":
-            credit_card()
-            continue_or_stop()
-            break
-        elif selection == "5":
-            html_tags()
-            continue_or_stop()
-            break
-        elif selection == "6":
-            time_check()
-            continue_or_stop()
-        else:
-            print("Please select the numbers 1-5!")
-            continue
+        while True: # A while loop is used for input validation.
+            selection = input("Select 1-6: ").strip()
+            if selection == "1":
+                email()
+                continue_or_stop()
+                break
+            elif selection == "2":
+                phone_number()
+                continue_or_stop()
+                break
+            elif selection == "3":
+                url()
+                continue_or_stop()
+                break
+            elif selection == "4":
+                credit_card()
+                continue_or_stop()
+                break
+            elif selection == "5":
+                html_tags()
+                continue_or_stop()
+                break
+            elif selection == "6":
+                time_check()
+                continue_or_stop()
+            else:
+                print("Please select the numbers 1-5!")
+                continue
+    except KeyboardInterrupt:
+        clear_screen()
+        print("Shutting down application...")
+        time.sleep(1.5)
 
 
 def email():
+    clear_screen()
     while True:
-        quote = input("Enter the Email: ").strip()
+        quote = input("\nEnter the Email: ").strip()
         output = re.findall("^[A-Za-z0-9][\w_.-]+[A-Za-z0-9]@([A-Za-z0-9][A-Za-z0-9-]+.)+[A-Za-z]{2,}$", quote)
         if output:
             print(f"The Email, {quote}, input is correct!")
             break
         else:
-            print(output)
             print(f"The Email, {quote}, is not correct! Please try again!")
             print("Emails should follow this format: user@example.com or firstname.lastname@company.co.uk")
             continue
@@ -138,7 +144,9 @@ def continue_or_stop():
             prompt_user()
             break
         elif ans == "n":
-            print("Closing application now!")
+            clear_screen
+            print("Closing application now...")
+            time.sleep(1.5)
             break
         else:
             print("Enter Y or N")
