@@ -48,11 +48,11 @@ Example:<br>
 <em>Assuming I chose to validate emails:</em><br>
 <strong>
 Enter the Email: Jeremiah<br>
-The Email, Jeremiah, is not correct! Please try again!<br>
+The Email, Jeremiah, is not valid! Please try again!<br>
 Emails should follow this format: user@example.com or firstname.lastname@company.co.uk<br>
 
 Enter the Email: j.emmanuel@alustudent.com<br>
-The Email, j.emmanuel@alustudent.com, input is correct!<br>
+The Email, j.emmanuel@alustudent.com, input is valid!<br>
 Do you want to continue validating input [Y/N]: <br>
 </strong>
 
