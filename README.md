@@ -43,13 +43,13 @@ When you choose an option, you will be asked to input the data that you want to 
 Example:
 Assuming I chose to validate emails:
 
-Enter the Email: Jeremiah
-The Email, Jeremiah, is not correct! Please try again!
-Emails should follow this format: user@example.com or firstname.lastname@company.co.uk
+Enter the Email: Jeremiah<br>
+The Email, Jeremiah, is not correct! Please try again!<br>
+Emails should follow this format: user@example.com or firstname.lastname@company.co.uk<br>
 
-Enter the Email: j.emmanuel@alustudent.com
-The Email, j.emmanuel@alustudent.com, input is correct!
-Do you want to continue validating input [Y/N]: 
+Enter the Email: j.emmanuel@alustudent.com<br>
+The Email, j.emmanuel@alustudent.com, input is correct!<br>
+Do you want to continue validating input [Y/N]: <br>
 
 
 When you enter a valid input, you will be asked if you want to continue to validate input.
