@@ -49,11 +49,16 @@ def prompt_user():
             else:
                 print("Please select the numbers 1-5!")
                 continue
+
     except KeyboardInterrupt:
         clear_screen()
         print("Shutting down application...")
         time.sleep(1.5)
 
+    except Exception as e:
+        print(f"An error, {e}, has occured, attempting restart now...")
+        time.sleep(2)
+        prompt_user()
 
 def email():
     clear_screen()
@@ -70,8 +75,9 @@ def email():
 
 
 def phone_number():
+    clear_screen()
     while True:
-        quote = input("Enter the phone number: ").strip()
+        quote = input("\nEnter the phone number: ").strip()
         output = re.findall("^(\(?\d{3}\)?)(-| |\.)\d{3}(-| |\.)\d{4}$", quote)
         if output:
             print(f"The phone number, {quote}, is correct!")
@@ -83,8 +89,9 @@ def phone_number():
 
 
 def url():
+    clear_screen()
     while True:
-        quote = input("Enter the URL: ").strip()
+        quote = input("\nEnter the URL: ").strip()
         output = re.findall("(https:\/\/|http:\/\/)(www\.)?(\w+(-)*\w+\.)+\w+(\/(\w+)?)*(\?\w+=\w+)*$", quote)
         if output:
             print(f"The URL, {quote}, input is correct!")
@@ -96,9 +103,10 @@ def url():
 
 
 def credit_card():
+    clear_screen()
     while True:
-        quote = input("Enter the credit card number: ").strip()
-        output = re.findall("\d{4}(-| )?\d{4}(-| )?\d{4}(-| )?\d{4}", quote)
+        quote = input("\nEnter the credit card number: ").strip()
+        output = re.findall("^\d{4}(-| )?\d{4}(-| )?\d{4}(-| )?\d{4}$", quote)
         if output:
             print(f"The credit card number, {quote}, is correct!")
             break
@@ -109,10 +117,10 @@ def credit_card():
 
 
 def html_tags():
+    clear_screen()
     while True:
-        quote = input("Enter the HTML tag: ").strip()
-        output = re.findall("^<[A-Za-z]+>$", quote)
-        "^<([A-Za-z][\w\-]*)((( )+[A-Za-z-]+)(=((\"[\w\-\. ]+\")|('[\w\-\. ]+'))))*>$"
+        quote = input("\nEnter the HTML tag: ").strip()
+        output = re.findall("^<([A-Za-z][\w\-]*)((( )+[A-Za-z-]+)(=((\"[\w\-\. ]+\")|('[\w\-\. ]+'))))*>$", quote)
         if output:
             print(f"The HTML tag, {quote}, is correct!")
             break
@@ -123,8 +131,9 @@ def html_tags():
 
     
 def time_check():
+    clear_screen()
     while True:
-        quote = input("Enter the time (24hr format or 12hr format): ").strip()
+        quote = input("\nEnter the time (24hr format or 12hr format): ").strip().upper()
         output = re.findall("((23|22|21|20|([0-1][0-9])):[0-5]\d)|((12|11|10|[1-9]):[0-5]\d (AM|PM))", quote)
         if output:
             print(f"The time, {quote}, is correct!")
@@ -136,8 +145,9 @@ def time_check():
 
 def continue_or_stop():
     while True:
-        ans = input("Do you want to continue validating input [Y/N]: ").strip().lower()
+        ans = input("\nDo you want to continue validating input [Y/N]: ").strip().lower()
         if ans == "y":
+            clear_screen()
             print("Continuing to validate data...")
             time.sleep(1)
             clear_screen()

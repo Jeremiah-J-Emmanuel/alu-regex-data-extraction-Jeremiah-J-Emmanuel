@@ -57,4 +57,6 @@ Do you want to continue validating input [Y/N]: <br>
 </strong>
 
 When you enter a valid input, you will be asked if you want to continue to validate input.
-If you select yes, the application will show you the start up menu. If you choose no, the application will close.
+If you select yes, the application will show you the start up menu. If you choose no, the application will close. To forcefully shut down the application, press the keyboard interrupt key, which is CTRL+C for windows, and Mac. 
+
+If any other error occurs, the app will reload.
