@@ -52,7 +52,7 @@ def prompt_user():
 def email():
     while True:
         quote = input("Enter the Email: ").strip()
-        output = re.findall("pattern", quote)
+        output = re.findall("^[A-Za-z0-9][\w_.-]+[A-Za-z0-9]@([A-Za-z0-9][A-Za-z0-9-]+.)+[A-Za-z]{2,}$", quote)
         if output:
             print(f"The Email, {quote}, input is correct!")
             break
@@ -66,7 +66,7 @@ def email():
 def phone_number():
     while True:
         quote = input("Enter the phone number: ").strip()
-        output = re.findall("pattern", quote)
+        output = re.findall("^(\(?\d{3}\)?)(-| |\.)\d{3}(-| |\.)\d{4}$", quote)
         if output:
             print(f"The phone number, {quote}, is correct!")
             break
